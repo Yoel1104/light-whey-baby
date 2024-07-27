@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Whey Baby</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
+    <style>
+   
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+
+        .content {
+            flex: 1;
+        }
+
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo-container {
+            width: 150px; 
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 20px;             background-color: #333; 
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .logo {
+            font-family: 'Pacifico', cursive;
+            font-size: 3em; 
+            color: #e0aaff; 
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            background: linear-gradient(45deg, #e0aaff, #b28dff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        nav {
+            margin-left: auto; 
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+        }
+
+        /* Jumbotron */
+        .jumbotron {
+            background: #6f42c1; 
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .jumbotron h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .jumbotron p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .jumbotron input[type="email"] {
+            padding: 10px;
+            width: 80%;
+            max-width: 400px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .jumbotron input[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            background: #fff;
+            color: #6f42c1; 
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+       
+        .catalogo {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            justify-content: center; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+
+        .catalogo .producto {
+            background: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .catalogo img {
+            max-width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+
+        .catalogo h3 {
+            margin-bottom: 10px;
+        }
+
+        .catalogo p {
+            color: #666;
+        }
+
+       
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer .social-icons {
+            margin: 10px 0;
+        }
+
+        footer .social-icons a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 1.5em;
+            text-decoration: none;
+        }
+
+        footer .social-icons a:hover {
+            color: #007bff;
+        }
+
+        
+        @media (max-width: 768px) {
+            .jumbotron h1 {
+                font-size: 2em;
+            }
+
+            .jumbotron p {
+                font-size: 1em;
+            }
+
+            .jumbotron input[type="email"], .jumbotron input[type="submit"] {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            nav {
+                flex-direction: column;
+                margin-left: 0;
+                align-items: flex-start;
+            }
+
+            nav a {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <!-- Header -->
+        <header>
+            <div class="logo-container">
+                <img src="https://image.spreadshirtmedia.com/image-server/v1/products/T1459A842PA3861PT28D1043803255W4076H5905/views/1,width=1200,height=630,appearanceId=842,backgroundColor=F2F2F2/cheems-samurai-sticker.jpg" alt="Logo">
+            </div>
+            <div class="logo">Light Whey Baby</div>
+            <nav>
+                <a href="#jumbotron">Inicio</a>
+                <a href="#catalogo">Catálogo</a>
+                <a href="#footer">Contacto</a>
+            </nav>
+        </header>
+
+        <!-- Jumbotron -->
+        <section class="jumbotron" id="jumbotron">
+            <h1>Bienvenido a Light Whey Baby</h1>
+            <p>Descubre nuestros productos y ofertas exclusivas.</p>
+            <form action="#">
+                <input type="email" placeholder="Introduce tu correo" required>
+                <input type="submit" value="Suscribirse">
+            </form>
+        </section>
+
+        <!-- Catálogo -->
+        <section class="catalogo" id="catalogo">
+            <div class="producto">
+                <img src="https://m.media-amazon.com/images/I/71-1jWbbdmL.jpg" alt="Gold Standard Whey">
+                <h3>Gold Standard Whey</h3>
+                <p>Proteína de suero combinada para una rápida recuperación muscular. Alta solubilidad y variedad de sabores.</p>
+            </div>
+            <div class="producto">
+                <img src="https://www.suplementosgym.com.mx/media/catalog/product/cache/2/image/2522abfce08318a7b04a0a39d7099381/r/o/ronniecoleman-king-whey-5lb_1.jpg" alt="King Whey">
+                <h3>King Whey</h3>
+                <p>Mezcla de aislado de suero y caseína para soporte prolongado y recuperación muscular eficiente.</p>
+            </div>
+            <div class="producto">
+                <img src="https://universalfitness.com.do/wp-content/uploads/2023/07/raze-whey-2lb-vanilla-ice-cream-cake-1.webp" alt="Raze Whey">
+                <h3>Raze Whey</h3>
+                <p>Mezcla de concentrado y aislado de suero con enzimas digestivas para una óptima absorción y sabor.</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <p>&copy; 2024 Light Whey Baby. Todos los derechos reservados.</p>
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
